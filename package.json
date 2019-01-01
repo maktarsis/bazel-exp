@@ -33,7 +33,7 @@
     "@bazel/karma": "0.22.0",
     "@bazel/typescript": "0.22.0",
     "@types/jasmine": "2.8.14",
-    "@types/node": "8.9.5",
+    "@types/node": "8.10.39",
     "clang-format": "1.2.4",
     "codelyzer": "4.5.0",
     "protractor": "5.4.2",
