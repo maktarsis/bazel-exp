@@ -1,7 +1,18 @@
 {
   "name": "bazel-exp",
-  "version": "0.0.0",
+  "author": "Mak Tarsis  <tarsis.maksym@gmail.com>",
+  "description": "Experiment of building an Angular app with Bazel",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maktarsis/bazel-exp"
+  },
+  "bugs": "https://github.com/maktarsis/bazel-exp/issues",
+  "homepage": "https://github.com/maktarsis/bazel-exp/blob/master/README.md",
   "scripts": {
+    "// - NG - //": "angular scripts",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -9,7 +20,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@ngrx/store": "7.0.0",
     "rxjs": "6.3.3",
