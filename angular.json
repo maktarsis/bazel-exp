@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "bazel-exp"
+  "defaultProject": "bazel-exp",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }
