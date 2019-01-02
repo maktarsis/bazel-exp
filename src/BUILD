@@ -1,0 +1,129 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
+load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
+
+package(default_visibility = ["//visibility:public"])
+
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
+ts_config(
+    name = "tsconfig-test",
+    src = "tsconfig-test.json",
+    deps = [":tsconfig.json"],
+)
+
+load("@angular//:index.bzl", "ng_module")
+ng_module(
+    name = "src",
+    srcs = glob(
+        ["*.ts"],
+        exclude = ["main.ts"],
+    ),
+    assets = [
+        ":app.component.html",
+        "//src/styles:main",
+    ],
+    tsconfig = ":tsconfig.json",
+    deps = [
+        "//src/hello-world",
+        "//src/material",
+        "//src/todos",
+        "@angular//packages/core",
+        "@angular//packages/platform-browser",
+        "@angular//packages/platform-browser/animations",
+        "@angular//packages/router",
+        "@npm//@ngrx/store",
+    ],
+)
+
+# We always strip these paths off the front of any assets we serve
+_ROOT_DIRS = [
+    "npm/node_modules/zone.js/dist",
+    "npm/node_modules/@angular/material/prebuilt-themes",
+    "npm/node_modules/@ngrx/store/bundles",
+]
+
+# This devserver is written in Go and is super-fast.
+# It doesn't run any bundler or code splitter. Instead, it concatenates
+# UMD JavaScript code on-the-fly in-memory.
+# This scales really well for massive codebases.
+ts_devserver(
+    name = "devserver",
+    # serve these files rooted at /
+    additional_root_paths = _ROOT_DIRS,
+    # Serve these files but don't inject tags for them into the index file
+    # This might be because we only want to lazy-load these scripts on-demand,
+    # or because they aren't compatible with Require.js so we must use a runtime
+    # loader to load them.
+    data = [
+        "//src/images:image_assets",
+        "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
+    ],
+    # Start from the development version of the main
+    entry_module = "bazel_exp/src/main.dev",
+    # <script> and <link> tags will be automatically injected into this index file
+    index_html = "index.html",
+    # These scripts will be included in the JS bundle after require.js
+    # They should have only named UMD modules, or require.js will throw.
+    scripts = [
+        ":require.config.js",
+        ":module-id.js",
+        "@npm//node_modules/tslib:tslib.js",
+    ],
+    # Serve these files in addition to the JavaScript bundle
+    # The corresponding <script> or <link> tags will be injected into the index_html
+    static_files = [
+        "//src/styles:main.css",
+        "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
+        #  We load zone.js outside the bundle. That's because it's a "pollyfill"
+        # which speculates that such features might be available in a browser.
+        # Also it's tricky to configure dead code elimination to understand that
+        # zone.js is used, given that we don't have any import statement that
+        # imports from it.
+        "@npm//node_modules/zone.js:dist/zone.min.js",
+    ],
+    # Tell Bazel to build the sources first
+    deps = ["//src"],
+)
+
+rollup_bundle(
+    name = "bundle",
+    # These Angular routes may be lazy-loaded at runtime.
+    # So we tell Rollup that it can put them in separate JS chunks
+    # (code-splitting) for faster application startup.
+    # In the future, we could automatically gather these from statically
+    # analyzing the Angular sources.
+    additional_entry_points = [
+        "src/hello-world/hello-world.module.ngfactory",
+        "src/todos/todos.module.ngfactory",
+    ],
+    entry_point = "src/main.prod",
+    deps = [
+        "//src",
+        "@npm//@ngrx/store",
+    ],
+)
+
+web_package(
+    name = "prodapp",
+    additional_root_paths = _ROOT_DIRS + ["npm/node_modules/systemjs/dist"],
+    # do not sort
+    assets = [
+        "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
+        "@npm//node_modules/zone.js:dist/zone.min.js",
+        # We load system.js here as it is required in prodmode for code-splitting support.
+        "@npm//node_modules/systemjs:dist/system.js",
+        "//src/styles:main",
+        ":bundle.min.js",
+    ],
+    data = [
+        ":bundle",
+        "//src/images:image_assets",
+    ],
+    # <script> and <link> tags will be automatically injected into this index.
+    index_html = "index.html",
+)
+
+history_server(
+    name = "prodserver",
+    data = [":prodapp"],
+    templated_args = ["src/prodapp"],
+)
