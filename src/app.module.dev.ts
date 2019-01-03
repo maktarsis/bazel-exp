@@ -9,9 +9,9 @@ import { TodosModuleNgFactory } from './todos/todos.module.ngfactory';
 export class MyLoader extends NgModuleFactoryLoader {
   load(id: string) {
     switch (id) {
-      case routes.helloModuleId:
+      case routes.helloModule:
         return Promise.resolve(HelloWorldModuleNgFactory);
-      case routes.todosModuleId:
+      case routes.todosModule:
         return Promise.resolve(TodosModuleNgFactory);
       default:
         throw new Error(`Unrecognized route id ${id}`);

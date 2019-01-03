@@ -23,8 +23,8 @@ http_archive(
 http_archive(
     name = "angular",
     sha256 = "c480904802d62ce63a4955fd8679371a0d9620131c1c424c8786429f4e8ac77e",
-    strip_prefix = "angular-7.1.4",
-    url = "https://github.com/angular/angular/archive/7.1.4.zip",
+    strip_prefix = "angular-7.1.3",
+    url = "https://github.com/angular/angular/archive/7.1.3.zip",
 )
 
 http_archive(
