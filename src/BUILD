@@ -23,9 +23,9 @@ ng_module(
     tsconfig = ":tsconfig.json",
     deps = [
         "//src/app",
-        "//src/hello-world",
+        "//src/app/hello-world",
+        "//src/app/todos",
         "//src/material",
-        "//src/todos",
         "@angular//packages/core",
         "@angular//packages/platform-browser",
         "@angular//packages/platform-browser/animations",
@@ -95,8 +95,8 @@ rollup_bundle(
     # analyzing the Angular sources.
     additional_entry_points = [
         "src/app/app.module.ngfactory",
-        "src/hello-world/hello-world.module.ngfactory",
-        "src/todos/todos.module.ngfactory",
+        "src/app/hello-world/hello-world.module.ngfactory",
+        "src/app/todos/todos.module.ngfactory",
     ],
     entry_point = "src/main.prod",
     deps = [

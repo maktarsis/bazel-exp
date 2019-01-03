@@ -22,9 +22,9 @@ ng_module(
     ],
     tsconfig = "//src:tsconfig.json",
     deps = [
-        "//src/hello-world",
         "//src/material",
-        "//src/todos",
+        "//src/app/hello-world",
+        "//src/app/todos",
         "@angular//packages/core",
         "@angular//packages/platform-browser",
         "@angular//packages/platform-browser/animations",
