@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { msg } from '../../lib/file';
+import { msg } from '../../../lib/file';
 
 @Component({
   selector: 'hello-world',

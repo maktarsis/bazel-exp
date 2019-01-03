@@ -22,9 +22,9 @@ ng_module(
     ],
     tsconfig = "//src:tsconfig.json",
     deps = [
-        "//src/material",
-        "//src/app/hello-world",
-        "//src/app/todos",
+        "//src/app/views/hello-world",
+        "//src/app/views/todos",
+        "//src/app/shared/material",
         "@angular//packages/core",
         "@angular//packages/platform-browser",
         "@angular//packages/platform-browser/animations",
@@ -32,26 +32,3 @@ ng_module(
         "@npm//@ngrx/store"
     ],
 )
-
-#ng_module(
-#    name = "src",
-#    srcs = glob(
-#        ["*.ts"],
-#        exclude = ["main.ts"],
-#    ),
-#    assets = [
-#        "//src/styles:main",
-#    ],
-#    tsconfig = ":tsconfig.json",
-#    deps = [
-#        "//src/app",
-#        "//src/hello-world",
-#        "//src/material",
-#        "//src/todos",
-#        "@angular//packages/core",
-#        "@angular//packages/platform-browser",
-#        "@angular//packages/platform-browser/animations",
-#        "@angular//packages/router",
-#        "@npm//@ngrx/store",
-#    ],
-#)

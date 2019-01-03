@@ -3,8 +3,8 @@ import { NgModule, NgModuleFactoryLoader } from '@angular/core';
 import * as routes from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
-import { HelloWorldModuleNgFactory } from './hello-world/hello-world.module.ngfactory';
-import { TodosModuleNgFactory } from './todos/todos.module.ngfactory';
+import { HelloWorldModuleNgFactory } from './views/hello-world/hello-world.module.ngfactory';
+import { TodosModuleNgFactory } from './views/todos/todos.module.ngfactory';
 
 export class MyLoader extends NgModuleFactoryLoader {
   load(id: string) {

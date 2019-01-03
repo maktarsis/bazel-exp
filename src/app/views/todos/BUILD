@@ -21,8 +21,8 @@ ng_module(
     tsconfig = "//src:tsconfig.json",
     deps = [
         "//src/lib",
-        "//src/material",
-        "//src/reducers",
+        "//src/app/shared/material",
+        "//src/app/shared/reducers",
         "@angular//packages/common",
         "@angular//packages/core",
         "@angular//packages/forms",
