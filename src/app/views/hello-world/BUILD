@@ -4,7 +4,7 @@ load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
 sass_binary(
     name = "hello-world-styles",
     src = "hello-world.component.scss",
-    deps = ["//src/styles:shared"],
+    deps = ["//src/assets:shared"],
 )
 
 load("@angular//:index.bzl", "ng_module")
