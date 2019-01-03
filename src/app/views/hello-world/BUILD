@@ -20,7 +20,7 @@ ng_module(
     ],
     tsconfig = "//src:tsconfig.json",
     deps = [
-        "//src/lib",
+        "//src/app/shared/lib",
         "//src/app/shared/material",
         "@angular//packages/core",
         "@angular//packages/forms",
