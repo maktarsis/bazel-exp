@@ -18,11 +18,11 @@ ng_module(
         exclude = ["main.ts"],
     ),
     assets = [
-        ":app.component.html",
         "//src/styles:main",
     ],
     tsconfig = ":tsconfig.json",
     deps = [
+        "//src/app",
         "//src/hello-world",
         "//src/material",
         "//src/todos",
@@ -81,7 +81,9 @@ ts_devserver(
         "@npm//node_modules/zone.js:dist/zone.min.js",
     ],
     # Tell Bazel to build the sources first
-    deps = ["//src"],
+    deps = [
+        "//src"
+    ]
 )
 
 rollup_bundle(
@@ -92,6 +94,7 @@ rollup_bundle(
     # In the future, we could automatically gather these from statically
     # analyzing the Angular sources.
     additional_entry_points = [
+        "src/app/app.module.ngfactory",
         "src/hello-world/hello-world.module.ngfactory",
         "src/todos/todos.module.ngfactory",
     ],
