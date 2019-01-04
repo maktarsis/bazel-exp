@@ -15,7 +15,7 @@ ng_module(
     name = "src",
     srcs = glob(
         ["*.ts"],
-        exclude = ["main.ts"],
+        exclude = ["main/main.ts"],
     ),
     assets = [
         "//src/assets:main",
@@ -58,14 +58,14 @@ ts_devserver(
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
-    entry_module = "bazel_exp/src/main.dev",
+    entry_module = "bazel_exp/src/main/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
-        ":require.config.js",
-        ":module-id.js",
+        "//src/configs:require.config.js",
+        "//src/configs:module-id.js",
         "@npm//node_modules/tslib:tslib.js",
     ],
     # Serve these files in addition to the JavaScript bundle
