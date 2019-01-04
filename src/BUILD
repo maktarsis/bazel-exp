@@ -18,7 +18,7 @@ ng_module(
         exclude = ["main/main.ts"],
     ),
     assets = [
-        "//src/assets:main",
+        "//src/assets/styles:main",
     ],
     tsconfig = "//src/configs:tsconfig.json",
     deps = [
@@ -54,11 +54,11 @@ ts_devserver(
     # or because they aren't compatible with Require.js so we must use a runtime
     # loader to load them.
     data = [
-        "//src/assets:images",
+        "//src/assets/images:images",
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
-    entry_module = "bazel_exp/src/main/main.dev",
+    entry_module = "bazel_exp/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
     # These scripts will be included in the JS bundle after require.js
@@ -71,7 +71,7 @@ ts_devserver(
     # Serve these files in addition to the JavaScript bundle
     # The corresponding <script> or <link> tags will be injected into the index_html
     static_files = [
-        "//src/assets:main.css",
+        "//src/assets/styles:main.css",
         "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
         #  We load zone.js outside the bundle. That's because it's a "pollyfill"
         # which speculates that such features might be available in a browser.
@@ -114,12 +114,12 @@ web_package(
         "@npm//node_modules/zone.js:dist/zone.min.js",
         # We load system.js here as it is required in prodmode for code-splitting support.
         "@npm//node_modules/systemjs:dist/system.js",
-        "//src/assets:main",
+        "//src/assets/styles:main",
         ":bundle.min.js",
     ],
     data = [
         ":bundle",
-        "//src/assets:images",
+        "//src/assets/images:images",
     ],
     # <script> and <link> tags will be automatically injected into this index.
     index_html = "index.html",

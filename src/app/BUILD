@@ -4,7 +4,7 @@ load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
 sass_binary(
     name = "app-styles",
     src = "app.component.scss",
-    deps = ["//src/assets:shared"],
+    deps = ["//src/assets/styles:shared"],
 )
 
 load("@angular//:index.bzl", "ng_module")
