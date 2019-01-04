@@ -6,7 +6,7 @@ package(default_visibility = ["//visibility:public"])
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
 ts_config(
     name = "tsconfig-test",
-    src = "tsconfig-test.json",
+    src = "src/configs/tsconfig-test.json",
     deps = [":tsconfig.json"],
 )
 
@@ -20,7 +20,7 @@ ng_module(
     assets = [
         "//src/assets:main",
     ],
-    tsconfig = ":tsconfig.json",
+    tsconfig = "//src/configs:tsconfig.json",
     deps = [
         "//src/app",
         "//src/app/views/hello-world",

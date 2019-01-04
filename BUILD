@@ -5,5 +5,5 @@ package(default_visibility = ["//visibility:public"])
 # attribute.
 alias(
     name = "tsconfig.json",
-    actual = "//src:tsconfig.json",
+    actual = "//src/configs:tsconfig.json",
 )

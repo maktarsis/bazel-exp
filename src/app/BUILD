@@ -20,7 +20,7 @@ ng_module(
         "app.component.html",
         ":app-styles",
     ],
-    tsconfig = "//src:tsconfig.json",
+    tsconfig = "//src/configs:tsconfig.json",
     deps = [
         "//src/app/views/hello-world",
         "//src/app/views/todos",
