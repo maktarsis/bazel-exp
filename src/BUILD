@@ -58,7 +58,7 @@ ts_devserver(
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
-    entry_module = "bazel_exp/src/main.dev",
+    entry_module = "bazel_exp/src/main/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
     # These scripts will be included in the JS bundle after require.js
@@ -82,7 +82,8 @@ ts_devserver(
     ],
     # Tell Bazel to build the sources first
     deps = [
-        "//src"
+        "//src",
+        "//src/main:dev"
     ]
 )
 
