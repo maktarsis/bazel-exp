@@ -1,5 +1,5 @@
 {
-  "name": "bazel-exp",
+  "name": "angular-bazel-boilerplate",
   "author": "Mak Tarsis  <tarsis.maksym@gmail.com>",
   "description": "Experiment of building an Angular app with Bazel",
   "version": "0.0.1",
@@ -7,10 +7,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maktarsis/bazel-exp"
+    "url": "git+https://github.com/maktarsis/angular-bazel-boilerplate"
   },
-  "bugs": "https://github.com/maktarsis/bazel-exp/issues",
-  "homepage": "https://github.com/maktarsis/bazel-exp/blob/master/README.md",
+  "bugs": "https://github.com/maktarsis/angular-bazel-boilerplate/issues",
+  "homepage": "https://github.com/maktarsis/angular-bazel-boilerplate/blob/master/README.md",
   "scripts": {
     "build": "bazel build //src:bundle",
     "serve": "ibazel run //src:devserver",
