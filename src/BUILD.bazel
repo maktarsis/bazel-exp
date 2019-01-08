@@ -15,7 +15,7 @@ ng_module(
     name = "src",
     srcs = glob(
         ["*.ts"],
-        exclude = ["main/main.ts"],
+        exclude = ["main.ts"],
     ),
     assets = [
         "//src/assets/styles:main",
@@ -58,7 +58,7 @@ ts_devserver(
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
-    entry_module = "bazel_exp/src/main/main.dev",
+    entry_module = "bazel_exp/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
     # These scripts will be included in the JS bundle after require.js
@@ -81,10 +81,7 @@ ts_devserver(
         "@npm//node_modules/zone.js:dist/zone.min.js",
     ],
     # Tell Bazel to build the sources first
-    deps = [
-        "//src",
-        "//src/main:dev"
-    ]
+    deps = ["//src"]
 )
 
 rollup_bundle(
