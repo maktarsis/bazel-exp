@@ -51,6 +51,7 @@
     "@types/node": "8.10.39",
     "clang-format": "1.2.4",
     "protractor": "5.4.2",
+    "snyk": "^1.121.1",
     "typescript": "3.1.3"
   }
 }
