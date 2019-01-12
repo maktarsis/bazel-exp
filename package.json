@@ -11,20 +11,31 @@
   },
   "bugs": "https://github.com/maktarsis/angular-bazel-boilerplate/issues",
   "homepage": "https://github.com/maktarsis/angular-bazel-boilerplate/blob/master/README.md",
+  "engines": {
+    "node": ">=10.9.0 <11.0.0",
+    "yarn": ">=1.9.2 <2.0.0"
+  },
   "scripts": {
     "build": "bazel build //src:bundle",
-    "serve": "ibazel run //src:devserver",
+    "serve": "bazel run //src:devserver",
+    "watch:serve": "ibazel run //src:devserver",
     "serve-prod": "bazel run //src:prodserver",
+    "watch:serve-prod": "ibazel run //src:prodserver",
     "e2e": "bazel test //e2e:all",
     "test": "bazel test //src/...",
-    "benchmark": "ibazel-benchmark-runner //src:devserver src/hello-world/hello-world.component.ts --url=http://localhost:5432",
+    "benchmark": "ibazel-benchmark-runner //src:devserver src/features/hello-world/hello-world.component.ts --url=http://localhost:4200",
     "postinstall": "ngc -p postinstall.tsconfig.json",
     "bazel:format": "find . -type f \\( -name \"*.bzl\" -or -name WORKSPACE -or -name BUILD -or -name BUILD.bazel \\) ! -path \"*/node_modules/*\" | xargs buildifier -v --warnings=args-order,attr-cfg,attr-license,attr-non-empty,attr-output-default,attr-single-file,constant-glob,ctx-actions,ctx-args,depset-iteration,depset-union,dict-concatenation,duplicated-name,filetype,git-repository,http-archive,integer-division,load,load-on-top,native-build,native-package,out-of-order-load,output-group,package-name,package-on-top,positional-args,redefined-variable,repository-name,same-origin-load,string-iteration,unsorted-dict-items,unused-variable",
     "bazel:lint": "yarn bazel:format --lint=warn",
     "bazel:lint-fix": "yarn bazel:format --lint=fix",
-    "bazel:clean": "bazel clean",
+    "bazel:maxrank": "bazel query ... --output maxrank | tail -1",
     "format": "git-clang-format",
-    "precommit": "check-clang-format \"yarn format\""
+    "precommit": "check-clang-format \"yarn format\"",
+    "graph:in": "bazel query ... --output graph > graph.in",
+    "graph:in:prodapp": "bazel query 'deps(//src:prodapp)' --output graph > graph.in",
+    "graph:png": "bazel query ... --output graph | dot -Tpng > graph.png",
+    "graph:dot": "dot -Tpng < graph.in > graph.png",
+    "graph:all": "yarn run graph:in && yarn run graph:dot"
   },
   "dependencies": {
     "@ngrx/store": "7.0.0",
