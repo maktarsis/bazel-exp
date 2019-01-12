@@ -6,9 +6,10 @@ package(default_visibility = ["//visibility:public"])
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
 ts_config(
     name = "tsconfig-test",
-    src = "src/configs/tsconfig-test.json",
-    deps = [":tsconfig.json"],
+    src = "src/configs/tsconfig.spec.json",
+    deps = ["//:tsconfig.json"],
 )
+
 
 load("@angular//:index.bzl", "ng_module")
 ng_module(
@@ -61,6 +62,8 @@ ts_devserver(
     entry_module = "bazel_exp/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
+    # Localhost
+    port = 4200,
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
@@ -92,7 +95,6 @@ rollup_bundle(
     # In the future, we could automatically gather these from statically
     # analyzing the Angular sources.
     additional_entry_points = [
-        "src/app/app.module.ngfactory",
         "src/app/views/hello-world/hello-world.module.ngfactory",
         "src/app/views/todos/todos.module.ngfactory",
     ],

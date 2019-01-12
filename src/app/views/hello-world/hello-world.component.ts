@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { msg } from '../../shared/lib/file';
+import { msg } from '../../shared/lib/lib';
 
 @Component({
   selector: 'hello-world',

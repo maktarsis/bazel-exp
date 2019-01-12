@@ -4,6 +4,6 @@ package(default_visibility = ["//visibility:public"])
 
 ts_library(
     name = "lib",
-    srcs = ["file.ts"],
+    srcs = ["lib.ts"],
 )
 
