@@ -17,7 +17,7 @@ genrule(
     cmd = "cp $< $@",
 )
 
-load("@build_bazel_rules_typescript//:defs.bzl", "ts_config")
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
 ts_config(
     name = "tsconfig-test",
     src = "//src/configs:tsconfig.spec.json",
@@ -63,7 +63,6 @@ _ROOT_DIRS = [
 # It doesn't run any bundler or code splitter. Instead, it concatenates
 # UMD JavaScript code on-the-fly in-memory.
 # This scales really well for massive codebases.
-load("@build_bazel_rules_typescript//:defs.bzl", "ts_devserver")
 ts_devserver(
     name = "devserver",
     # serve these files rooted at /
