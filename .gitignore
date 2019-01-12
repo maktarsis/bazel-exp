@@ -1,6 +1,6 @@
 # compiled output
-/dist
 /bazel-out
+/dist
 
 # dependencies
 /node_modules

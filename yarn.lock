@@ -4983,10 +4983,10 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-systemjs@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-2.1.1.tgz#453a123aa3bb2dcb581d0e99fabd2f29eadbe10d"
-  integrity sha512-T8bqkkIl56bLGrMzQh3+Ug2Oxg7NSyj+JFHv5Gi8V81mQr5XQKHEDooqvixbchYM9ZoeZedJFCMiPyN+nIEj4Q==
+systemjs@0.21.5:
+  version "0.21.5"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-0.21.5.tgz#2fcef4edfe744003da4787f3f3d45d73f94462d2"
+  integrity sha512-GWzZhN/x7Fsae2CYkz2GF7OgOS+YDgKulcgd5L1kTogZHMKDrPx5T8zI8I0y5RoU9Dx78Z7j1XMfuFa1thD84A==
 
 tar-stream@^1.5.0:
   version "1.6.2"

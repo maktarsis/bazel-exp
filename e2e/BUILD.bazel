@@ -3,7 +3,7 @@ ts_library(
     name = "e2e",
     testonly = 1,
     srcs = glob(["src/*.ts"]),
-    tsconfig = "//src/configs:tsconfig.spec",
+    tsconfig = "//src:tsconfig-test",
     deps = [
         "@npm//@types/jasmine",
         "@npm//jasmine",

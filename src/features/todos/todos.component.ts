@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { ADD_TODO, DELETE_TODO, TOGGLE_DONE, UPDATE_TODO } from '../../shared/reducers/reducers';
+import { ADD_TODO, DELETE_TODO, TOGGLE_DONE, UPDATE_TODO } from '../../app/shared/reducers/reducers';
 
 @Component({
   selector: 'todos',

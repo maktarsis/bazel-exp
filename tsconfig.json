@@ -8,7 +8,7 @@
       "es2015.promise"
     ],
     "rootDirs": [
-      "..",
+      "./src",
       "dist/bin/src"
     ],
     "experimentalDecorators": true,

@@ -18,7 +18,7 @@ ng_module(
         ":hello-world.component.html",
         ":hello-world-styles",
     ],
-    tsconfig = "//src/configs:tsconfig.json",
+    tsconfig = "//src:tsconfig-app",
     deps = [
         "//src/app/shared/lib",
         "//src/app/shared/material",
