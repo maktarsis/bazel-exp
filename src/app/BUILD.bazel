@@ -1,5 +1,12 @@
 package(default_visibility = ["//visibility:public"])
 
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+sass_binary(
+    name = "app-styles",
+    src = "app.component.scss",
+    deps = []
+)
+
 load("@angular//:index.bzl", "ng_module")
 ng_module(
     name = "app",
@@ -9,7 +16,10 @@ ng_module(
         "app.module.dev.ts",
         "app-routing.module.ts"
     ],
-    assets = ["app.component.html"],
+    assets = [
+        ":app-styles",
+        "app.component.html"
+    ],
     tsconfig = "//src:tsconfig-app",
     deps = [
         "//src/features/hello-world",
