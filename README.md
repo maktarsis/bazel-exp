@@ -1,3 +1,5 @@
-# Experiment of building an Angular app with Bazel
+# Angular Bazel Boilerplate
 
-### Work in Progress 🔥
+#### Contains starter code structure and basic feature module to explore some workaround and possibilities
+
+#### Feel free to use groundword. I will be glad to comments, issues, PRs and so on.
