@@ -1,5 +1,5 @@
 # Angular Bazel Boilerplate
 
-#### Contains starter code structure and basic feature module to explore some workaround and possibilities
+###### Contains starter code structure and basic feature modules to explore some workarounds and possibilities
 
-#### Feel free to use groundword. I will be glad to comments, issues, PRs and so on.
+###### Feel free to use groundword. I will be glad to comments, issues, PRs and so on. More information and examples will be available later
