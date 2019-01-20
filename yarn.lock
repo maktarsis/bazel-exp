@@ -40,17 +40,17 @@
     "@angular-devkit/core" "7.1.4"
     rxjs "6.3.3"
 
-"@angular/animations@7.1.4":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.1.4.tgz#6c1ca6b8449bb0fa874343371961fccbe19791bc"
-  integrity sha512-877LZ83scksJtflVz97CUWlSsZnxduBxPD+ls5OTrTT/bq3muzHCm8rgTO7S8fBwwrEVXLorvMAlhDPpMg5Swg==
+"@angular/animations@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.1.3.tgz#365c782efd7aa962cf9ce3a014d915e7e2720aab"
+  integrity sha512-l5Dnm1XFrZjkicpcCxwyqIyGflCFlEZJDZj3FCwf/Y8YUHYOlYspPbCSHj8bpPJKS9PVLM77fJCu8AZaam5iJA==
   dependencies:
     tslib "^1.9.0"
 
-"@angular/bazel@7.1.4":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/bazel/-/bazel-7.1.4.tgz#1b84d7f843f7b0496efda4cd1c74496ee420a19a"
-  integrity sha512-ykCuGMoWLqr8M/B59IV7/5gqPlR+rs3l3aMuDHZwyAi1EfjgNUeGAPljUW0BoFATDLVQ2bww6qB1bhAOlMNDEg==
+"@angular/bazel@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/bazel/-/bazel-7.1.3.tgz#b96a25317c29d7c601729e6761f5c18101247e15"
+  integrity sha512-bsRI7gkjCreESA3jeOlbb3V6qws4Ls7qULUrh0YpUvPi+vVFJ2CNIYhYoTz/GquxKcX6iWOmo7aDS81CPyi4WQ==
   dependencies:
     "@angular-devkit/architect" "^0.10.6"
     "@angular-devkit/core" "^7.0.4"
@@ -58,7 +58,6 @@
     "@bazel/typescript" "^0.21.0"
     "@schematics/angular" "^7.0.4"
     "@types/node" "6.0.84"
-    semver "^5.6.0"
     shelljs "0.8.2"
     tsickle "0.34.0"
 
@@ -71,17 +70,17 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/common@7.1.4":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-7.1.4.tgz#a89f43e87317dee80b7664225442aaeca6c83547"
-  integrity sha512-oQPCilcf1H/OXmt4z6PfGoCSb1YPRBAXGs/KRBARm3tYan2r5CmV0BFwpWXWQrEMt8YQqqLiBQUQ64d8+VFm8Q==
+"@angular/common@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-7.1.3.tgz#13f171fe3802318cab2128a48e5aca922adb30e9"
+  integrity sha512-4LnvTevDJW9Fmpmg6KeEyYcz8O4pS88nkm8FwKz+bkbFEiPz6tIxzhDlGuCAH0UmU4GojdWKMWhvLLvTEyCMpw==
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@7.1.4":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-7.1.4.tgz#2a65ed98a189fb066d7e3dc6d98eff0918b3ff62"
-  integrity sha512-fyEY58A53pmVEuhfyU1z1TAi1n5rOK5cCjhFnUUnnESQFEW/aQYOl0ZL6LDsMSYfa78fkDw4Nc0DytvZ1ymVMw==
+"@angular/compiler-cli@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-7.1.3.tgz#47cf718c4cc91f9f9cbcf845cb83b004db1a91db"
+  integrity sha512-24r/7+qyXnDNsKWPxOnMECmncqc+Ucvd/clHHmEXX50EJOw8cA9odOJI1LnO+aWcMVRkjTidL6kVlagddkyOMg==
   dependencies:
     canonical-path "1.0.0"
     chokidar "^1.4.2"
@@ -95,17 +94,17 @@
     tslib "^1.9.0"
     yargs "9.0.1"
 
-"@angular/compiler@7.1.4":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-7.1.4.tgz#fc0f8ddd2d1b6e1a4aafab2af7949bbd05bc527c"
-  integrity sha512-AvYXtjEJ27Rhv4c27DXNEa58Lit63jdydzbz7VuyFhNU+FwDUK2DC4gZe0nWZsf7HUniJezVRFkECDCZQeSKCQ==
+"@angular/compiler@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-7.1.3.tgz#4ac14c217812e3e7eb4df5d53b8b11612561ac50"
+  integrity sha512-uOcMyP9UBr7EkBWDMnGe/f3A1OidDt3Mq1TCp/8ETAxjerD7HxPJgdP0psBm85j6S5LorTUIOUm6ETfVP09E7A==
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@7.1.4":
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-7.1.4.tgz#ad899985290957bbb9ac5c47c62ae5a72ccf5d00"
-  integrity sha512-36uWLrmmlzf8JKaq2A5F2tPQEHvFSsbTQWOT559Drp1tzM2uSA7PysNHv5TXUshDn5i54S2EQFm4bj2YPp4Hzg==
+"@angular/core@7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-7.1.3.tgz#759f626d734a90552936604d7adda5ac885a6887"
+  integrity sha512-Vv2Eolb5fZZZLIyodazDTIH6l3wT0ss7oJq+op0aqfrH43HlZ1LkkoovPskX2w0Om9bzPfvfPz+fWm36WXrFyA==
   dependencies:
     tslib "^1.9.0"
 
@@ -184,7 +183,7 @@
   integrity sha512-QPJbvCvxpQF4Wvcrl8efQY095+5OMh/uCPB7REGD728KmFKCPz0R/RhaU5dyNOoaZlR7yTGPkvVcN0nNUKqKKQ==
   dependencies:
     jasmine-core "2.8.0"
-    karma "github:alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a"
+    karma alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a
     karma-chrome-launcher "2.2.0"
     karma-firefox-launcher "1.1.0"
     karma-jasmine "1.1.1"
@@ -2850,7 +2849,6 @@ karma-sourcemap-loader@0.3.7:
 
 "karma@github:alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a":
   version "1.7.1"
-  uid fa1a84ac881485b5657cb669e9b4e5da77b79f0a
   resolved "https://codeload.github.com/alexeagle/karma/tar.gz/fa1a84ac881485b5657cb669e9b4e5da77b79f0a"
   dependencies:
     bluebird "^3.3.0"

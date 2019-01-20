@@ -1,6 +1,3 @@
-load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
-load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
-
 package(default_visibility = ["//visibility:public"])
 
 genrule(
@@ -37,9 +34,7 @@ ng_module(
         ["*.ts"],
         exclude = ["main.ts"],
     ),
-    assets = [
-        "//src/assets/styles:main",
-    ],
+    assets = ["//src/assets/styles:main",],
     tsconfig = "//src:tsconfig-app",
     deps = [
         "//src/app",
@@ -76,7 +71,7 @@ ts_devserver(
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
-    entry_module = "bazel_exp/src/main.dev",
+    entry_module = "boilerplate/src/main.dev",
     # <script> and <link> tags will be automatically injected into this index file
     index_html = "index.html",
     # Localhost
@@ -104,6 +99,7 @@ ts_devserver(
     deps = ["//src"]
 )
 
+load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle", "history_server")
 rollup_bundle(
     name = "bundle",
     # These Angular routes may be lazy-loaded at runtime.
@@ -122,6 +118,7 @@ rollup_bundle(
     ],
 )
 
+load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
 web_package(
     name = "prodapp",
     additional_root_paths = _ROOT_DIRS + ["npm/node_modules/systemjs/dist"],

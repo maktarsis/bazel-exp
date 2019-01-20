@@ -1,7 +1,7 @@
 {
   "name": "angular-bazel-boilerplate",
   "author": "Mak Tarsis  <tarsis.maksym@gmail.com>",
-  "description": "Experiment of building an Angular app with Bazel",
+  "description": "Angular bazel boilerplate for more comfortable start with Bazel",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
@@ -45,13 +45,13 @@
     "zone.js": "0.8.28"
   },
   "devDependencies": {
-    "@angular/animations": "7.1.4",
-    "@angular/bazel": "7.1.4",
+    "@angular/animations": "7.1.3",
+    "@angular/bazel": "7.1.3",
     "@angular/cdk": "7.1.1",
-    "@angular/common": "7.1.4",
-    "@angular/compiler": "7.1.4",
-    "@angular/compiler-cli": "7.1.4",
-    "@angular/core": "7.1.4",
+    "@angular/common": "7.1.3",
+    "@angular/compiler": "7.1.3",
+    "@angular/compiler-cli": "7.1.3",
+    "@angular/core": "7.1.3",
     "@angular/material": "7.1.1",
     "@bazel/bazel": "0.21.0",
     "@bazel/benchmark-runner": "0.1.0",

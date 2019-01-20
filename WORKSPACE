@@ -1,7 +1,7 @@
 # The WORKSPACE file tells Bazel that this directory is a "workspace", which is like a project root.
 # The content of this file specifies all the external dependencies Bazel needs to perform a build.
 
-workspace(name = "bazel_exp")
+workspace(name = "boilerplate")
 
 # This rule is built-into Bazel but we need to load it first to download more rules
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
@@ -36,8 +36,7 @@ http_archive(
 
 # Angular material
 # NOTE: using a `7.1.1-compat-ng-7.1.3` branch of material2 on a fork here
-# since Angular and rules_typescript version under Bazel checking is too strict
-# at the moment.
+# since Angular and rules_typescript version under Bazel checking is too strict at the moment.
 # https://github.com/gregmagolan/material2/commit/e2090864cddf926445eefd39c7e90eada107013d
 
 http_archive(
@@ -77,7 +76,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_register_toolchains", "go_rules_depen
 go_register_toolchains()
 go_rules_dependencies()
 
-load("@io_bazel_rules_webtesting//web:repositories.bzl", "browser_repositories", "web_test_repositories")
+load("@io_bazel_rules_webtesting//web:repositories.bzl", "web_test_repositories", "browser_repositories")
 web_test_repositories()
 browser_repositories(chromium = True, firefox = True)
 
