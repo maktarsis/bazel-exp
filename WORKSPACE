@@ -54,17 +54,26 @@ http_archive(
 )
 
 load("@build_bazel_rules_nodejs//:package.bzl", "rules_nodejs_dependencies")
+
 rules_nodejs_dependencies()
 
 load("@build_bazel_rules_typescript//:package.bzl", "rules_typescript_dependencies")
+
 rules_typescript_dependencies()
 
 load("@angular//packages/bazel:package.bzl", "rules_angular_dependencies")
+
 rules_angular_dependencies()
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "check_bazel_version", "node_repositories", "yarn_install")
+
 check_bazel_version(minimum_bazel_version = "0.19.0")
-node_repositories(node_version = "10.9.0", yarn_version = "1.12.1")
+
+node_repositories(
+    node_version = "10.9.0",
+    yarn_version = "1.12.1",
+)
+
 yarn_install(
     name = "npm",
     data = ["//:postinstall.tsconfig.json"],
@@ -73,21 +82,32 @@ yarn_install(
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_register_toolchains", "go_rules_dependencies")
+
 go_register_toolchains()
+
 go_rules_dependencies()
 
-load("@io_bazel_rules_webtesting//web:repositories.bzl", "web_test_repositories", "browser_repositories")
+load("@io_bazel_rules_webtesting//web:repositories.bzl", "browser_repositories", "web_test_repositories")
+
 web_test_repositories()
-browser_repositories(chromium = True, firefox = True)
+
+browser_repositories(
+    chromium = True,
+    firefox = True,
+)
 
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_setup_workspace")
+
 ts_setup_workspace()
 
 load("@angular//:index.bzl", "ng_setup_workspace")
+
 ng_setup_workspace()
 
 load("@angular_material//:index.bzl", "angular_material_setup_workspace")
+
 angular_material_setup_workspace()
 
 load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
+
 sass_repositories()

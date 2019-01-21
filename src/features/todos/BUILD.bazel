@@ -1,6 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
 sass_binary(
     name = "todos-styles",
     src = "todos.component.scss",
@@ -8,6 +9,7 @@ sass_binary(
 )
 
 load("@angular//:index.bzl", "ng_module")
+
 ng_module(
     name = "todos",
     srcs = [

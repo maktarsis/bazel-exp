@@ -15,6 +15,7 @@ genrule(
 )
 
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_config", "ts_devserver")
+
 ts_config(
     name = "tsconfig-test",
     src = "//src/configs:tsconfig.spec.json",
@@ -28,13 +29,14 @@ ts_config(
 )
 
 load("@angular//:index.bzl", "ng_module")
+
 ng_module(
     name = "src",
     srcs = glob(
         ["*.ts"],
         exclude = ["main.ts"],
     ),
-    assets = ["//src/assets/styles:main",],
+    assets = ["//src/assets/styles:main"],
     tsconfig = "//src:tsconfig-app",
     deps = [
         "//src/app",
@@ -67,7 +69,7 @@ ts_devserver(
     # or because they aren't compatible with Require.js so we must use a runtime
     # loader to load them.
     data = [
-        "//src/assets/images:images",
+        "//src/assets/images",
         "@npm//node_modules/@ngrx/store:bundles/store.umd.min.js",
     ],
     # Start from the development version of the main
@@ -96,10 +98,11 @@ ts_devserver(
         "zonejs",
     ],
     # Tell Bazel to build the sources first
-    deps = ["//src"]
+    deps = ["//src"],
 )
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle", "history_server")
+load("@build_bazel_rules_nodejs//:defs.bzl", "history_server", "rollup_bundle")
+
 rollup_bundle(
     name = "bundle",
     # These Angular routes may be lazy-loaded at runtime.
@@ -119,6 +122,7 @@ rollup_bundle(
 )
 
 load("@build_bazel_rules_nodejs//internal/web_package:web_package.bzl", "web_package")
+
 web_package(
     name = "prodapp",
     additional_root_paths = _ROOT_DIRS + ["npm/node_modules/systemjs/dist"],
@@ -133,7 +137,7 @@ web_package(
     ],
     data = [
         ":bundle",
-        "//src/assets/images:images",
+        "//src/assets/images",
     ],
     # <script> and <link> tags will be automatically injected into this index.
     index_html = "index.html",

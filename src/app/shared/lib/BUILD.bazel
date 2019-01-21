@@ -6,4 +6,3 @@ ts_library(
     name = "lib",
     srcs = ["lib.ts"],
 )
-
