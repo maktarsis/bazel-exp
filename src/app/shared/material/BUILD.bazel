@@ -5,7 +5,7 @@ package(default_visibility = ["//visibility:public"])
 ng_module(
     name = "material",
     srcs = glob(["*.ts"]),
-    tsconfig = "//src:tsconfig.json",
+    tsconfig = "//src:tsconfig.app.json",
     deps = [
         "@angular//packages/core",
         "@angular_material//src/lib:material",

@@ -22,7 +22,7 @@ genrule(
 ts_config(
     name = "tsconfig-test",
     src = "//src:tsconfig.spec.json",
-    deps = [":tsconfig.json"],
+    deps = [":tsconfig.app.json"],
 )
 
 
@@ -33,7 +33,7 @@ ng_module(
         exclude = ["main.ts"],
     ),
     assets = ["//src/assets/styles:main"],
-    tsconfig = ":tsconfig.json",
+    tsconfig = ":tsconfig.app.json",
     deps = [
         "//src/app",
         "//src/app/shared/material",
