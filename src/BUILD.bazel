@@ -21,8 +21,8 @@ genrule(
 
 ts_config(
     name = "tsconfig-test",
-    src = "//src:tsconfig.spec.json",
-    deps = [":tsconfig.app.json"],
+    src = "//src/configs:tsconfig.spec.json",
+    deps = ["//src/configs:tsconfig.app.json"],
 )
 
 
@@ -33,7 +33,7 @@ ng_module(
         exclude = ["main.ts"],
     ),
     assets = ["//src/assets/styles:main"],
-    tsconfig = ":tsconfig.app.json",
+    tsconfig = "//src/configs:tsconfig.app.json",
     deps = [
         "//src/app",
         "//src/app/shared/material",
@@ -77,8 +77,8 @@ ts_devserver(
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
-        "//src:require.config.js",
-        "//src:module-id.js",
+        "//src/configs:require.config.js",
+        "//src/configs:module-id.js",
         "@npm//node_modules/tslib:tslib.js",
     ],
     # Serve these files in addition to the JavaScript bundle

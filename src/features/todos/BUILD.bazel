@@ -19,7 +19,7 @@ ng_module(
         "todos.component.html",
         ":todos-styles",
     ],
-    tsconfig = "//src:tsconfig.app.json",
+    tsconfig = "//src/configs:tsconfig.app.json",
     deps = [
         "//src/app/shared/lib",
         "//src/app/shared/material",
