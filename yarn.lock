@@ -2847,8 +2847,9 @@ karma-sourcemap-loader@0.3.7:
   dependencies:
     graceful-fs "^4.1.2"
 
-"karma@github:alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a":
+karma@alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a:
   version "1.7.1"
+  uid fa1a84ac881485b5657cb669e9b4e5da77b79f0a
   resolved "https://codeload.github.com/alexeagle/karma/tar.gz/fa1a84ac881485b5657cb669e9b4e5da77b79f0a"
   dependencies:
     bluebird "^3.3.0"
@@ -5754,7 +5755,7 @@ zip-stream@^1.2.0:
     lodash "^4.8.0"
     readable-stream "^2.0.0"
 
-zone.js@0.8.28:
-  version "0.8.28"
-  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.28.tgz#fd55df8743514b233613f8e4f5bb8e27207a48c3"
-  integrity sha512-MjwlvV0wr65IQiT0WSHedo/zUhAqtypMdTUjqroV81RohGj1XANwHuC37dwYxphTRbZBYidk0gNS0dQrU2Q3Pw==
+zone.js@0.8.29:
+  version "0.8.29"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.29.tgz#8dce92aa0dd553b50bc5bfbb90af9986ad845a12"
+  integrity sha512-mla2acNCMkWXBD+c+yeUrBUrzOxYMNFdQ6FGfigGGtEVBPJx07BQeJekjt9DmH1FtZek4E9rE1eRR9qQpxACOQ==
