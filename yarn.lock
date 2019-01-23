@@ -40,24 +40,25 @@
     "@angular-devkit/core" "7.1.4"
     rxjs "6.3.3"
 
-"@angular/animations@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.1.3.tgz#365c782efd7aa962cf9ce3a014d915e7e2720aab"
-  integrity sha512-l5Dnm1XFrZjkicpcCxwyqIyGflCFlEZJDZj3FCwf/Y8YUHYOlYspPbCSHj8bpPJKS9PVLM77fJCu8AZaam5iJA==
+"@angular/animations@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-7.2.2.tgz#a81e4fa60de2e33ec462b43af122a66926df72fb"
+  integrity sha512-St03YR3N4Rv0vLr0+3V0kmf/QNi9q0tOenAlHP+jG/YySPkkv8P3xRcGVU38ID4JQzRiShUD+k2r+oZGCQMNjw==
   dependencies:
     tslib "^1.9.0"
 
-"@angular/bazel@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/bazel/-/bazel-7.1.3.tgz#b96a25317c29d7c601729e6761f5c18101247e15"
-  integrity sha512-bsRI7gkjCreESA3jeOlbb3V6qws4Ls7qULUrh0YpUvPi+vVFJ2CNIYhYoTz/GquxKcX6iWOmo7aDS81CPyi4WQ==
+"@angular/bazel@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/bazel/-/bazel-7.2.2.tgz#fdcaf6211a7eb389b1c0688e2deaa4e73c74af8b"
+  integrity sha512-X6q+Xe4uB9YDNZ9SKdyvjAfG2So3zbABdUSFOG0nzBdadSACqptN2fWJfwVRv6LsyJb6KNh/d8qorFxnLV8jZQ==
   dependencies:
     "@angular-devkit/architect" "^0.10.6"
     "@angular-devkit/core" "^7.0.4"
     "@angular-devkit/schematics" "^7.0.4"
-    "@bazel/typescript" "^0.21.0"
+    "@bazel/typescript" "^0.22.1"
     "@schematics/angular" "^7.0.4"
     "@types/node" "6.0.84"
+    semver "^5.6.0"
     shelljs "0.8.2"
     tsickle "0.34.0"
 
@@ -70,17 +71,17 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/common@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-7.1.3.tgz#13f171fe3802318cab2128a48e5aca922adb30e9"
-  integrity sha512-4LnvTevDJW9Fmpmg6KeEyYcz8O4pS88nkm8FwKz+bkbFEiPz6tIxzhDlGuCAH0UmU4GojdWKMWhvLLvTEyCMpw==
+"@angular/common@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-7.2.2.tgz#f229eb52e37acf3db4e464c935021713a1d7195b"
+  integrity sha512-43EcR3mbM+dKH4VE1EYS1HxSuEToxxv5XPktKqdzY95g8PBOxe11ifcXoYHgImd7YOWzcKoy0k6yQbX3o0cZ8g==
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-7.1.3.tgz#47cf718c4cc91f9f9cbcf845cb83b004db1a91db"
-  integrity sha512-24r/7+qyXnDNsKWPxOnMECmncqc+Ucvd/clHHmEXX50EJOw8cA9odOJI1LnO+aWcMVRkjTidL6kVlagddkyOMg==
+"@angular/compiler-cli@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-7.2.2.tgz#74cb5ce7a1dc17f2d68649584d04e7a727b70203"
+  integrity sha512-ac62YlDescAaf0qPguyRkpzWCMNlwtsKObq80GKADP33Sxm0BxGt4+Wz6rolvUuWzCX8aZwJ0FA7ehKxdmdQoA==
   dependencies:
     canonical-path "1.0.0"
     chokidar "^1.4.2"
@@ -94,17 +95,17 @@
     tslib "^1.9.0"
     yargs "9.0.1"
 
-"@angular/compiler@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-7.1.3.tgz#4ac14c217812e3e7eb4df5d53b8b11612561ac50"
-  integrity sha512-uOcMyP9UBr7EkBWDMnGe/f3A1OidDt3Mq1TCp/8ETAxjerD7HxPJgdP0psBm85j6S5LorTUIOUm6ETfVP09E7A==
+"@angular/compiler@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-7.2.2.tgz#7e0251f1283a58c0c991f7975eb38e2cab02a6b5"
+  integrity sha512-vjPreOVPca6HSuDmj7N1w5u8hwXdm98gEPo2wqQMVuJd6qvGEyLYE9FsHc0XCchyQEKSybAYl1dwsjZq2nNSvQ==
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-7.1.3.tgz#759f626d734a90552936604d7adda5ac885a6887"
-  integrity sha512-Vv2Eolb5fZZZLIyodazDTIH6l3wT0ss7oJq+op0aqfrH43HlZ1LkkoovPskX2w0Om9bzPfvfPz+fWm36WXrFyA==
+"@angular/core@7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-7.2.2.tgz#a0081d943f439b7c4fc4bfd877757931ed7edf63"
+  integrity sha512-kQ0HxUYAPvly8b3aibTGbiodFnBBgo3asXAQuPgFjYYEqcKR1zZII7PQdaEF9kb9sfm/IKLKj4nd9fZ0gcgqZg==
   dependencies:
     tslib "^1.9.0"
 
@@ -194,22 +195,13 @@
     semver "5.6.0"
     tmp "0.0.33"
 
-"@bazel/typescript@0.22.1":
+"@bazel/typescript@0.22.1", "@bazel/typescript@^0.22.1":
   version "0.22.1"
   resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.22.1.tgz#b52c00e8560019e2f9d273d45c04785e0ec9d9bd"
   integrity sha512-88DaCCnNg8rPlKP0eAQEZuoiJkEPeiItpUS3oBR1sFQNBRJb56D25ahK8+N6LJk4qaH+ZQ1/AHOPDhfEEWvDzA==
   dependencies:
     protobufjs "5.0.3"
     semver "5.6.0"
-    source-map-support "0.5.9"
-    tsutils "2.27.2"
-
-"@bazel/typescript@^0.21.0":
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.21.0.tgz#41c304f77a42c6a016280d0f4c20e0749c3f4b2a"
-  integrity sha512-ASXj0RFybmqoa3LwqkTU3gNkX9bY9wL/VDNo5hlp9pynYWl4RMpe9V3m/qDIdtSuLJ+qD+Z3FKT/OcpWQHMlYA==
-  dependencies:
-    protobufjs "5.0.3"
     source-map-support "0.5.9"
     tsutils "2.27.2"
 
@@ -2847,8 +2839,9 @@ karma-sourcemap-loader@0.3.7:
   dependencies:
     graceful-fs "^4.1.2"
 
-"karma@github:alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a":
+karma@alexeagle/karma#fa1a84ac881485b5657cb669e9b4e5da77b79f0a:
   version "1.7.1"
+  uid fa1a84ac881485b5657cb669e9b4e5da77b79f0a
   resolved "https://codeload.github.com/alexeagle/karma/tar.gz/fa1a84ac881485b5657cb669e9b4e5da77b79f0a"
   dependencies:
     bluebird "^3.3.0"
