@@ -5,5 +5,5 @@ exports_files([
     "tsconfig.spec.json",
     "tslint.json",
     "require.config.js",
-    "module-id.js"
+    "module-id.js",
 ])

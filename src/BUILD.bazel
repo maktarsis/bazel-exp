@@ -25,7 +25,6 @@ ts_config(
     deps = ["//src/configs:tsconfig.app.json"],
 )
 
-
 ng_module(
     name = "src",
     srcs = glob(
