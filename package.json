@@ -60,7 +60,7 @@
     "@bazel/karma": "0.22.1",
     "@bazel/typescript": "0.22.1",
     "@types/jasmine": "3.3.12",
-    "@types/node": "8.10.40",
+    "@types/node": "8.10.45",
     "clang-format": "1.2.4",
     "protractor": "5.4.2",
     "snyk": "1.143.1",
