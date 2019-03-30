@@ -38,7 +38,7 @@
     "graph:all": "yarn run graph:in && yarn run graph:dot"
   },
   "dependencies": {
-    "@ngrx/store": "7.3.0",
+    "@ngrx/store": "7.4.0",
     "rxjs": "6.3.3",
     "systemjs": "0.21.6",
     "tslib": "1.9.3",
