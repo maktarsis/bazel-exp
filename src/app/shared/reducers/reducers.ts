@@ -19,10 +19,7 @@ export interface TodoPayload {
 export function todoReducer(state = [], action: ActionWithPayload<TodoPayload>) {
   switch (action.type) {
     case ADD_TODO:
-      return [
-        action.payload,
-        ...state
-      ];
+      return [action.payload, ...state];
     case DELETE_TODO:
       return state.filter((item, index) => index !== action.payload.index);
     case UPDATE_TODO:

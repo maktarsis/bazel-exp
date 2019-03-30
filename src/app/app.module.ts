@@ -11,14 +11,11 @@ import { todoReducer } from './shared/reducers/reducers';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    StoreModule.forRoot({ todoReducer })
+    AppRoutingModule, BrowserModule, BrowserAnimationsModule, MaterialModule,
+    StoreModule.forRoot({todoReducer})
   ],
   exports: [AppComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

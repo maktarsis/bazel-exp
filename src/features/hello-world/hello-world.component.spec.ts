@@ -22,7 +22,7 @@ describe('BannerComponent (inline template)', () => {
     TestBed.configureTestingModule({
       declarations: [HelloWorldComponent],  // declare the test component
       aotSummaries: HelloWorldModuleNgSummary,
-      imports: [BrowserAnimationsModule]
+      imports: [BrowserAnimationsModule],
     });
     TestBed.compileComponents();
   }));

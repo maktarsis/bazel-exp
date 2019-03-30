@@ -41,12 +41,10 @@ ng_module(
     ),
     assets = ["//src/assets/styles:main"],
     tsconfig = "//src/configs:tsconfig.app.json",
-    deps = NG_FACTORY_ADDED_IMPORTS + [
+    deps = [
         "//src/app",
         "//src/app/shared/material",
-        "@npm//@angular/core",
         "@npm//@angular/platform-browser",
-        "@npm//@angular/router",
         "@npm//@ngrx/store",
     ],
 )
@@ -54,7 +52,7 @@ ng_module(
 filegroup(
     name = "rxjs_umd_modules",
     srcs = [
-        ":rxjs_shims.js",
+        "//src/configs:rxjs_shims.js",
         "@npm//node_modules/rxjs:bundles/rxjs.umd.js",
     ],
 )
@@ -91,9 +89,9 @@ ts_devserver(
     # These scripts will be included in the JS bundle after require.js
     # They should have only named UMD modules, or require.js will throw.
     scripts = [
+        "@npm//node_modules/tslib:tslib.js",
         "//src/configs:require.config.js",
         ":rxjs_umd_modules",
-        "@npm//node_modules/tslib:tslib.js",
         "@npm//node_modules/@angular/animations:bundles/animations.umd.js",
         "@npm//node_modules/@angular/animations:bundles/animations-browser.umd.js",
         "@npm//node_modules/@angular/cdk:bundles/cdk-platform.umd.js",
@@ -159,7 +157,13 @@ rollup_bundle(
     entry_point = "src/main.prod",
     deps = [
         "//src",
+        "@npm//@angular/common",
+        "@npm//@angular/core",
+        "@npm//@angular/material",
+        "@npm//@angular/platform-browser",
+        "@npm//@angular/router",
         "@npm//@ngrx/store",
+        "@npm//rxjs",
     ],
 )
 

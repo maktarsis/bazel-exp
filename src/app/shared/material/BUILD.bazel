@@ -13,7 +13,7 @@ ng_module(
     srcs = glob(["*.ts"]),
     tsconfig = "//src/configs:tsconfig.app.json",
     deps = NG_FACTORY_ADDED_IMPORTS + [
-       "@npm//@angular/core",
-       "@npm//@angular/material",
-   ],
+        "@npm//@angular/core",
+        "@npm//@angular/material",
+    ],
 )

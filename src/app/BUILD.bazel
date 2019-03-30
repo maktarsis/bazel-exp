@@ -1,19 +1,11 @@
 load("@npm_angular_bazel//:index.bzl", "ng_module")
-load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
 
 package(default_visibility = ["//visibility:public"])
 
 NG_FACTORY_ADDED_IMPORTS = [
-    "@npm//@angular/cdk",
     "@npm//@angular/material",
     "@npm//@angular/forms",
 ]
-
-sass_binary(
-    name = "app-styles",
-    src = "app.component.scss",
-    deps = [],
-)
 
 ng_module(
     name = "app",
@@ -23,20 +15,15 @@ ng_module(
         "app.module.ts",
         "app-routing.module.ts",
     ],
-    assets = [
-        ":app-styles",
-        "app.component.html",
-    ],
+    assets = ["app.component.html"],
     tsconfig = "//src/configs:tsconfig.app.json",
     deps = NG_FACTORY_ADDED_IMPORTS + [
-        "//src/app/shared/material",
         "//src/features/hello-world",
+        "//src/app/shared/material",
         "//src/features/todos",
-        "@npm//@angular/common",
         "@npm//@angular/core",
         "@npm//@angular/platform-browser",
         "@npm//@angular/router",
         "@npm//@ngrx/store",
-        "@npm//rxjs",
     ],
 )

@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('angular example application with bazel', () => {
+describe('angular example application', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -8,7 +8,7 @@ describe('angular example application with bazel', () => {
   });
 
   it('should display: Hello World!', async () => {
-    await AppPage.navigateTo();
+    await page.navigateTo();
     expect(await page.getParagraphText()).toEqual(`Hello World`);
     await page.typeInInput('!');
     expect(await page.getParagraphText()).toEqual(`Hello World!`);

@@ -32,9 +32,8 @@
 
 <mat-list>
   <mat-list-item *ngFor="let todo of todos$ | async; let i = index;">
-    <mat-icon matListIcon (click)="toggleDone(todo, i)">{{ todo.done
-      ? "check_box"
-      : "check_box_outline_blank" }}</mat-icon>
+    <mat-icon matListIcon
+              (click)="toggleDone(todo, i)">{{ todo.done ? "check_box" : "check_box_outline_blank" }}</mat-icon>
     <div class="mat-list-text" [class.done]="todo.done">{{ todo.value }}</div>
     <div>
       <mat-icon matListIcon (click)="editTodo(todo, i)" class="edit-icon">edit</mat-icon>

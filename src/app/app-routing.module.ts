@@ -1,35 +1,19 @@
-import { NgModule, NgModuleFactory, NgModuleFactoryLoader } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { HelloWorldModuleNgFactory } from '../features/hello-world/hello-world.module.ngfactory';
-import { TodosModuleNgFactory } from '../features/todos/todos.module.ngfactory';
+export const helloModuleId = '../features/hello-world/hello-world.module#HelloWorldModule';
+export const todosModuleId = '../features/todos/todos.module#TodosModule';
 
-const modules = {
-  helloWorld: '../features/hello-world/hello-world.module#HelloWorldModule',
-  todos: '../features/todos/todos.module#TodosModule'
-};
-
+// These are lazy-loaded routes - note that we don't import the modules here
+// to avoid having an eager dependency on them.
 const routes: Routes = [
-  { path: '', pathMatch: 'full', loadChildren: modules.helloWorld },
-  { path: 'todos', pathMatch: 'full', loadChildren: modules.todos }
+  {path: '', pathMatch: 'full', loadChildren: helloModuleId},
+  {path: 'todos', pathMatch: 'full', loadChildren: todosModuleId},
 ];
-
-export class FeatureLoader extends NgModuleFactoryLoader {
-  public load(id: string):Promise<NgModuleFactory<{}>> {
-    switch (id) {
-      case modules.helloWorld:
-        return Promise.resolve(HelloWorldModuleNgFactory);
-      case modules.todos:
-        return Promise.resolve(TodosModuleNgFactory);
-      default:
-        throw new Error(`Unrecognized route id ${id}`);
-    }
-  }
-}
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {
 }
