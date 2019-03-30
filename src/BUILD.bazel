@@ -27,6 +27,13 @@ genrule(
     cmd = "cp $< $@",
 )
 
+genrule(
+    name = "core-js",
+    srcs = ["@npm//node_modules/core-js:client/core.min.js"],
+    outs = ["core.min.js"],
+    cmd = "cp $< $@",
+)
+
 ts_config(
     name = "tsconfig-test",
     src = "//src/configs:tsconfig.spec.json",
@@ -169,15 +176,22 @@ rollup_bundle(
 
 web_package(
     name = "prodapp",
-    additional_root_paths = _ROOT_DIRS + ["npm/node_modules/systemjs/dist"],
+    additional_root_paths = _ROOT_DIRS + [
+        "npm/node_modules/systemjs/dist",
+        "npm/node_modules/core-js/client",
+    ],
     # do not sort
     assets = [
         "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
         "zonejs",
-        # We load system.js here as it is required in prodmode for code-splitting support.
-        "systemjs",
         "//src/assets/styles:main",
+        # For differential loading, we supply both an ESModule entry point and an es5 entry point
+        # The injector will put two complimentary script tags in the index.html
         ":bundle.min.js",
+        ":bundle.min.es2015.js",
+        # Include polyfills that will be requested by old browsers
+        "systemjs",
+        "core-js",
     ],
     data = [
         ":bundle",

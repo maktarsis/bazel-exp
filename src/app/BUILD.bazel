@@ -11,7 +11,6 @@ ng_module(
     name = "app",
     srcs = [
         "app.component.ts",
-        "app.module.dev.ts",
         "app.module.ts",
         "app-routing.module.ts",
     ],
