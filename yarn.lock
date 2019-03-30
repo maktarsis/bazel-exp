@@ -244,10 +244,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.3.1.tgz#5f02f208f138e581bbdb1534d5c013d7a0ac9799"
   integrity sha1-XwLyCPE45YG72xU01cAT16Csl5k=
 
-"@bazel/karma@0.27.8":
-  version "0.27.8"
-  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.27.8.tgz#e9c4ef4190b2da3c23b01bc7b79830c3985cfb1f"
-  integrity sha512-H6TDIUcP+nW4dvjQeCINAyGLMnEV45maAM0HxModAe0cKfVxBpZrVKwG6ZuKChvQWY2nLDtN3C9K/GGISxP7hg==
+"@bazel/karma@0.27.9":
+  version "0.27.9"
+  resolved "https://registry.yarnpkg.com/@bazel/karma/-/karma-0.27.9.tgz#7530f75907afb0e15d5ee2d658a92d83084085fe"
+  integrity sha512-/N8Ez9jmYyMjBG+Iwec2nZeySEJD1R8+52Kdw7GCWZrWcLkktmMC8ynfB3tMPe7cENfEoLKERlOoeOMKOnPzFg==
   dependencies:
     jasmine-core "2.8.0"
     karma "^4.0.0"
@@ -324,10 +324,10 @@
   resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.12.8.tgz#e9646c91c650d536f37b04762eaa81afdc9a19d3"
   integrity sha512-0smzAmVIUCsssAqDSPn9AfOPKUobq2WXMygbzC5JNswAJOs4uJK6DTZgfnHC8QLE2q374sPNwWU5D5LuoAJQSA==
 
-"@ngrx/store@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-7.3.0.tgz#12684cef59765f161d0152b12a6caad63dbb832a"
-  integrity sha512-cELOO+kHYo100Q2wi1cZqhK9jA/NJs5//0lkphoR/AKxShGmJCkub6L+qnJCrzROu4Bvod4DAlA9VAQSq4EYLg==
+"@ngrx/store@7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-7.4.0.tgz#525a343aa45d7f6ca60f3301a23a27669c14bbce"
+  integrity sha512-kwTUHgfgBeAL4RQBjZO46z9v4Xzg8PXAgY4WwXdt3zUk1tF4ZvijMleFvFRUoiJJfxF/UM6jgIZ/yGrX2dXQuA==
 
 "@schematics/angular@8.0.0-beta.10":
   version "8.0.0-beta.10"
@@ -1118,7 +1118,7 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-core-js@^2.2.0:
+core-js@2.6.5, core-js@^2.2.0:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
   integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==

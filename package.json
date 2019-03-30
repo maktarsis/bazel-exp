@@ -33,41 +33,42 @@
     "graph:dot": "dot -Tpng < graph.in > graph.png",
     "graph:all": "yarn run graph:in && yarn run graph:dot"
   },
-    "engines": {
-        "node": ">=10.9.0 <11.0.0",
-        "yarn": ">=1.9.2 <2.0.0"
-    },
-    "dependencies": {
-        "@angular/animations": "8.0.0-beta.10",
-        "@angular/cdk": "7.3.6",
-        "@angular/cli": "8.0.0-beta.10",
-        "@angular/common": "8.0.0-beta.10",
-        "@angular/core": "8.0.0-beta.10",
-        "@angular/forms": "8.0.0-beta.10",
-        "@angular/material": "7.3.6",
-        "@angular/platform-browser": "8.0.0-beta.10",
-        "@angular/platform-browser-dynamic": "8.0.0-beta.10",
-        "@angular/router": "8.0.0-beta.10",
-        "@ngrx/store": "7.3.0",
-        "rxjs": "6.4.0",
-        "systemjs": "0.21.6",
-        "tslib": "1.9.3",
-        "zone.js": "0.9.0"
-    },
-    "devDependencies": {
-        "@angular/bazel": "8.0.0-beta.10",
-        "@angular/compiler": "8.0.0-beta.10",
-        "@angular/compiler-cli": "8.0.0-beta.10",
-        "@bazel/bazel": "0.24.0",
-        "@bazel/benchmark-runner": "0.1.0",
-        "@bazel/buildifier": "0.22.0",
-        "@bazel/ibazel": "0.10.0",
-        "@bazel/karma": "0.27.8",
-        "@types/jasmine": "3.3.12",
-        "@types/node": "6.14.4",
-        "clang-format": "1.2.4",
-        "husky": "0.14.3",
-        "protractor": "6.0.0",
-        "typescript": "3.3.3333"
-    }
+  "engines": {
+    "node": ">=10.9.0 <11.0.0",
+    "yarn": ">=1.9.2 <2.0.0"
+  },
+  "dependencies": {
+    "@angular/animations": "8.0.0-beta.10",
+    "@angular/cdk": "7.3.6",
+    "@angular/cli": "8.0.0-beta.10",
+    "@angular/common": "8.0.0-beta.10",
+    "@angular/core": "8.0.0-beta.10",
+    "@angular/forms": "8.0.0-beta.10",
+    "@angular/material": "7.3.6",
+    "@angular/platform-browser": "8.0.0-beta.10",
+    "@angular/platform-browser-dynamic": "8.0.0-beta.10",
+    "@angular/router": "8.0.0-beta.10",
+    "@ngrx/store": "7.4.0",
+    "rxjs": "6.4.0",
+    "systemjs": "0.21.6",
+    "tslib": "1.9.3",
+    "zone.js": "0.9.0"
+  },
+  "devDependencies": {
+    "@angular/bazel": "8.0.0-beta.10",
+    "@angular/compiler": "8.0.0-beta.10",
+    "@angular/compiler-cli": "8.0.0-beta.10",
+    "@bazel/bazel": "0.24.0",
+    "@bazel/benchmark-runner": "0.1.0",
+    "@bazel/buildifier": "0.22.0",
+    "@bazel/ibazel": "0.10.0",
+    "@bazel/karma": "0.27.9",
+    "@types/jasmine": "3.3.12",
+    "@types/node": "6.14.4",
+    "clang-format": "1.2.4",
+    "core-js": "2.6.5",
+    "husky": "0.14.3",
+    "protractor": "6.0.0",
+    "typescript": "3.3.3333"
+  }
 }
