@@ -1,4 +1,4 @@
-import { NgModule, NgModuleFactoryLoader } from '@angular/core';
+import { NgModule, NgModuleFactory, NgModuleFactoryLoader } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HelloWorldModuleNgFactory } from '../features/hello-world/hello-world.module.ngfactory';
@@ -15,7 +15,7 @@ const routes: Routes = [
 ];
 
 export class FeatureLoader extends NgModuleFactoryLoader {
-  public load(id: string) {
+  public load(id: string):Promise<NgModuleFactory<{}>> {
     switch (id) {
       case modules.helloWorld:
         return Promise.resolve(HelloWorldModuleNgFactory);
