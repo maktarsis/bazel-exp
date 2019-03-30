@@ -27,7 +27,7 @@
     "bazel:maxrank": "bazel query ... --output maxrank | tail -1",
     "format": "git-clang-format",
     "precommit": "check-clang-format \"yarn format\"",
-    "graph:in": "bazel query ... --output graph > graph.in",
+    "graph:in": "bazel query ... -- output graph > graph.in",
     "graph:in:prodapp": "bazel query 'deps(//src:prodapp)' --output graph > graph.in",
     "graph:png": "bazel query ... --output graph | dot -Tpng > graph.png",
     "graph:dot": "dot -Tpng < graph.in > graph.png",
@@ -39,19 +39,19 @@
     },
     "dependencies": {
         "@angular/animations": "angular/animations-builds#8.0.0-beta.9+b5295ad",
-        "@angular/cdk": "7.3.5",
+        "@angular/cdk": "7.3.6",
         "@angular/common": "angular/common-builds#8.0.0-beta.9+b5295ad",
         "@angular/core": "angular/core-builds#8.0.0-beta.9+b5295ad",
         "@angular/forms": "angular/forms-builds#8.0.0-beta.9+b5295ad",
-        "@angular/material": "7.3.5",
+        "@angular/material": "7.3.6",
         "@angular/platform-browser": "angular/platform-browser-builds#8.0.0-beta.9+b5295ad",
         "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds#8.0.0-beta.9+b5295ad",
         "@angular/router": "angular/router-builds#8.0.0-beta.9+b5295ad",
         "@ngrx/store": "7.3.0",
-        "rxjs": "~6.4.0",
+        "rxjs": "6.4.0",
         "systemjs": "0.21.6",
         "tslib": "1.9.3",
-        "zone.js": "0.8.29"
+        "zone.js": "0.9.0"
     },
     "devDependencies": {
         "@angular/bazel": "angular/bazel-builds#8.0.0-beta.9+b5295ad",
@@ -59,14 +59,14 @@
         "@angular/compiler-cli": "angular/compiler-cli-builds#8.0.0-beta.9+b5295ad",
         "@bazel/bazel": "0.23.2",
         "@bazel/benchmark-runner": "0.1.0",
-        "@bazel/buildifier": "^0.22.0",
+        "@bazel/buildifier": "0.22.0",
         "@bazel/ibazel": "0.10.0",
         "@bazel/karma": "0.27.8",
         "@types/jasmine": "3.3.12",
         "@types/node": "6.14.4",
         "clang-format": "1.2.4",
         "husky": "0.14.3",
-        "protractor": "5.4.1",
+        "protractor": "6.0.0",
         "typescript": "3.3.3333"
     }
 }
