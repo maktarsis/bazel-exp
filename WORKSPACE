@@ -12,8 +12,6 @@ http_archive(
     urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.27.9/rules_nodejs-0.27.9.tar.gz"],
 )
 
-
-
 http_archive(
     name = "io_bazel_rules_sass",
     sha256 = "e5316ee8a09d1cbb732d3938b400836bf94dba91a27476e9e27706c4c0edae1f",
@@ -70,4 +68,3 @@ ts_setup_workspace()
 load("@io_bazel_rules_sass//sass:sass_repositories.bzl", "sass_repositories")
 
 sass_repositories()
-

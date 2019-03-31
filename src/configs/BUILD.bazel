@@ -4,5 +4,5 @@ exports_files([
     "tsconfig.app.json",
     "tsconfig.spec.json",
     "require.config.js",
-    "rxjs_shims.js"
+    "rxjs_shims.js",
 ])
