@@ -58,7 +58,7 @@ load("@npm_bazel_karma//:browser_repositories.bzl", "browser_repositories")
 
 browser_repositories()
 
-# Setup the rules_typescript tooolchain
+# Setup the rules_typescript toolchain
 load("@npm_bazel_typescript//:defs.bzl", "ts_setup_workspace")
 
 ts_setup_workspace()

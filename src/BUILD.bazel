@@ -139,11 +139,10 @@ ts_devserver(
     static_files = [
         "//src/assets/styles:main.css",
         "@npm//node_modules/@angular/material:prebuilt-themes/deeppurple-amber.css",
-        #  We load zone.js outside the bundle. That's because it's a "pollyfill"
+        #  We load zone.js outside the bundle. That's because it's a "polyfill"
         # which speculates that such features might be available in a browser.
         # Also it's tricky to configure dead code elimination to understand that
-        # zone.js is used, given that we don't have any import statement that
-        # imports from it.
+        # zone.js is used, given that we don't have any import statement that imports from it.
         "zonejs",
     ],
     # Tell Bazel to build the sources first
